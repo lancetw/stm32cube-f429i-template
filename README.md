@@ -1,6 +1,6 @@
-#STM32CubeF4 template for Linux
+#STM32F429 Discovery STM32Cube template for Linux
 
-`$ cd Projects/blinky`
+`$ cd Projects/LTDC`
 
 ## Dev
 

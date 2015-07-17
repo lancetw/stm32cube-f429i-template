@@ -5,7 +5,7 @@
 STM32_DRV = ../../Drivers
 STM32_LIB = ../../Middlewares
 
-vpath %.c $(STM32_DRV)/STM32F4xx_HAL_Driver/Src $(STM32_DRV)/BSP/STM32F429I-Discovery $(STM32_DRV)/BSP/Components
+vpath %.c $(STM32_DRV)/STM32F4xx_HAL_Driver/Src $(STM32_DRV)/BSP/STM32F429I-Discovery $(STM32_DRV)/BSP/Components $(STM32_DRV)/BSP/STM324x9I_EVAL $(STM32_LIB)/Third_Party $(STM32_LIB)/ST/STM32_USB_Host_Library
 
 SRCS   += main.c
 
@@ -19,11 +19,16 @@ SRCS   += $(STM32_DRV)/CMSIS/Device/ST/STM32F4xx/Source/Templates/gcc/startup_st
 
 INC_DIRS  = $(STM32_DRV)/BSP/STM32F429I-Discovery
 INC_DIRS += $(STM32_DRV)/BSP/Components
+INC_DIRS += $(STM32_DRV)/BSP/STM324x9I_EVAL
 INC_DIRS += $(STM32_DRV)/CMSIS/Include
 INC_DIRS += $(STM32_DRV)/CMSIS/Device/ST/STM32F4xx/Include
 INC_DIRS += $(STM32_DRV)/STM32F4xx_HAL_Driver/Inc
 INC_DIRS += $(STM32_LIB)/ST/STM32_USB_Device_Library/Class/HID/Inc
 INC_DIRS += $(STM32_LIB)/ST/STM32_USB_Device_Library/Core/Inc
+INC_DIRS += $(STM32_LIB)/ST/STM32_USB_Host_Library/Core/Inc
+INC_DIRS += $(STM32_LIB)/ST/STM32_USB_Host_Library/Class/MSC/Inc
+INC_DIRS += $(STM32_LIB)/Third_Party/FatFs/src
+INC_DIRS += $(STM32_LIB)/Third_Party/FatFs/src/drivers
 INC_DIRS += .
 
 INCLUDE = $(addprefix -I,$(INC_DIRS))
